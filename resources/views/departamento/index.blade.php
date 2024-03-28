@@ -23,17 +23,24 @@
             <th scope="col">Actions</th>
           </tr>
         </thead>
-        <tbody>
+    <tbody>
             @foreach ($departamentos as $departamento)
             <tr>
                 <th scope="row">{{ $departamento->depa_codi }}</th>
                 <td>{{ $departamento->depa_nomb}}</td>
-                <td> {{$departamento->pais_nomb}}</td>
-                <td><span> Acciones</span></td>
-             </tr>
-          @endforeach
-        </tbody>
-      </table>
+                <td>{{ $departamento->pais_nomb}}</td>
+ <td>
+                <form action="{{ route('departamentos.destroy', ['departamento' => $departamento->depa_codi]) }}"
+                    method='POST' style="display: inline-block">
+                    @method('delete')
+                    @csrf
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                </form>
+            </tr>
+                @endforeach
+     </tbody>
+ </td>
+</table>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
