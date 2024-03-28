@@ -18,8 +18,8 @@
         <thead>
           <tr>
             <th scope="col">Code</th>
-            <th scope="col">Commune</th>
             <th scope="col">Municipality</th>
+            <th scope="col">Departament</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
@@ -28,8 +28,8 @@
           <tr>
             <th scope="row">{{$municipio->muni_codi}}</th>
             <td>{{$municipio->muni_nomb}}</td>
-            <td>{{$municipio->depa_codi}}</td>
-            <td><span> Actions </span></td>
+            <td>{{$municipio->depa_nomb}}</td>
+            <td><span> Acciones </span></td>
           </tr>
           @endforeach
         </tbody>
