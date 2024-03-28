@@ -24,22 +24,26 @@
           </tr>
         </thead>
     <tbody>
-            @foreach ($departamentos as $departamento)
+        @foreach ($departamentos as $departamento)
             <tr>
-                <th scope="row">{{ $departamento->depa_codi }}</th>
-                <td>{{ $departamento->depa_nomb}}</td>
-                <td>{{ $departamento->pais_nomb}}</td>
- <td>
-                <form action="{{ route('departamentos.destroy', ['departamento' => $departamento->depa_codi]) }}"
-                    method='POST' style="display: inline-block">
-                    @method('delete')
-                    @csrf
-                    <input class="btn btn-danger" type="submit" value="Delete">
-                </form>
+                 <th scope="row">{{ $departamento->depa_codi }}</th>
+                 <td>{{ $departamento->depa_nomb}}</td>
+                 <td>{{ $departamento->pais_nomb}}</td>
+                <td>
+                    <a href="{{route('departamentos.edit', ['departamento'=>$departamento->depa_codi]) }}"
+                        class="btn btn-info"> Edit</a></li>
+
+                    <form action="{{ route('departamentos.destroy', ['departamento' => $departamento->depa_codi]) }}"
+                        method='POST' style="display: inline-block">
+                        @method('delete')
+                        @csrf
+                        <input class="btn btn-danger" type="submit" value="Delete">
+                    </form>
+                </td>
             </tr>
-                @endforeach
-     </tbody>
- </td>
+        @endforeach
+    </tbody>
+
 </table>
     <!-- Optional JavaScript; choose one of the two! -->
 

@@ -33,7 +33,7 @@
             <option selected disabled value="">Choose one...</option>
             @foreach ($departamentos as $departamento)
             @if ($departamento->depa_codi == $municipio->depa_codi)
-            <option selected value="{{ $departamento->depa_codi }}"> {{$departamento->depa_nomb }}</option>
+              <option selected value="{{ $departamento->depa_codi }}"> {{$departamento->depa_nomb }}</option>
             @else
                 <option value="{{ $departamento->depa_codi }}">{{ $departamento->depa_nomb}}</option>
                 @endif
