@@ -13,7 +13,7 @@
   <body>
     <div class="container">
     <h1>Listado de Departamentos</h1>
-    <a href="{{ route('departamento.index') }}" class="btn btn-success">Add</a>
+    <a href="{{ route('departamento.create') }}" class="btn btn-success">Add</a>
     <table class="table">
         <thead>
           <tr>

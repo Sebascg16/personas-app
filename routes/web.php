@@ -38,3 +38,5 @@ Route::get('/municipios/{municipio}/edit', [MunicipioController::class, 'edit'])
 
 //Rutas departamentos
 Route::get('/departamentos', [DepartamentoController::class, 'index']) -> name ('departamento.index');
+Route::POST('/departamentos', [DepartamentoController::class, 'store']) -> name('departamentos.store');
+Route::get('/departamentos/create', [DepartamentoController::class, 'create']) -> name('departamento.create');
