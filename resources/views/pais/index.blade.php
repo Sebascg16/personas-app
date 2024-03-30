@@ -13,22 +13,23 @@
   <body>
     <div class="container">
     <h1>Listado de Paises</h1>
-    <a href="{{ route('paises.index') }}" class="btn btn-success"> Add</a>
+    <a href="{{ route('paises.create') }}" class="btn btn-success"> Add</a>
     <table class="table">
         <thead>
           <tr>
-           
+            <th scope="col">Code</th>
             <th scope="col">Country</th>
-            <th scope="col">Capital Country</th>
+            <th scope="col">Code Country</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
             @foreach ($paises as $pais)
           <tr>
-            <th scope="row">{{ $pais->pais_nomb }}</th>
+            <th scope="row">{{ $pais->pais_codi }}</th>
+            <td>{{ $pais->pais_nomb}}</td>
             <td>{{ $pais->pais_capi}}</td>
-            <td><span>Actions</span></td>
+            <td><span>Acciones</span></td>
           </tr>
         @endforeach
 
