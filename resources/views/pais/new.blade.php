@@ -26,16 +26,16 @@
           name="name" placeholder="Country name.">
         </div>
 
-        <label for= "country">Country:</label>
-        <select class="form-select" id="country" name="code" required>
+        <label for= "Nacionality">Nacionality Code:</label>
+        <select class="form-select" id="Nacionality" name="code" required>
             <option selected disabled value="">Choose one...</option>
             @foreach ($paises as $pais)
-            <option value="{{ $pais->pais_codi }}">{{ $pais->pais_nomb }}</option>
+            <option value="{{ $pais->pais_codi }}">{{ $pais->pais_capi }}</option>
         @endforeach
         </select>
           <div class="mt-3">
             <button type="submit" class="btn btn-primary">Save</button>
-            <a href="{{ route(paises.index) }}" class="btn btn-warning">Cancel</a>
+            <a href="{{ route('paises.index') }}" class="btn btn-warning">Cancel</a>
         </div>
       </form>
 
